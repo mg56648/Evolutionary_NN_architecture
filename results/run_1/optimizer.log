@@ -1,0 +1,331 @@
+Started operation at 2021-03-15 01:46:51 with the following parameters:
+retain : 0.02
+parent fraction: 0.1
+number of children per couple: 2
+reject selection chance: 0.05
+mutation rate: 0.1
+forced mutation: True
+population size: 50
+individual layers: True
+early stopping: True
+tensorboard: False
+model_checkpoint: False
+csv logging: True
+percentage penalty per input: 0.15
+early stopping patience: 10
+
+The networks are restricted by the following parameter constraints:
+n_layers [2, 3, 4, 5]
+batch_size [5000]
+optimizer ['adam']
+epochs [500]
+layer_type ['dense', 'dropout', 'batch_norm', 'batch_norm_dropout']
+n_nodes [4, 8, 16, 32]
+activation ['relu', 'selu', 'tanh', 'elu', 'sigmoid', 'linear', 'exponential']
+dropout [0.1, 0.2]
+input_shape [7]
+inputs ['phi', 'psi', 'the', 'omega', 'NCaR_angle', 'end_Ca_end_angle', 'OO_distance']
+output_shape [24]
+outputs ['custom']
+
+
+Training network 0 of 49: adam_5000
+Training time: 10.60142207145691, training val_loss: 0.022723697125911713
+Test time: 0.2748878002166748, testing loss: 0.022717691957950592
+{'network_config': {'n_layers': 2, 'batch_size': 5000, 'optimizer': 'adam', 'epochs': 500}, 'layer_config': {'layer_type': ['dense', 'batch_norm'], 'n_nodes': [8, 8], 'activation': ['sigmoid', 'exponential'], 'dropout': [0.2, 0.1]}, 'io_config': {'input_shape': 7, 'inputs': ['end_Ca_end_angle', 'phi', 'OO_distance', 'psi', 'the', 'omega', 'NCaR_angle'], 'output_shape': 24, 'outputs': ['custom']}}
+Completed testing with 0.04657126851379871 val_loss
+
+Training network 1 of 49: adam_5000
+Training time: 7.08488392829895, training val_loss: nan
+Test time: 0.26651716232299805, testing loss: nan
+{'network_config': {'n_layers': 5, 'batch_size': 5000, 'optimizer': 'adam', 'epochs': 500}, 'layer_config': {'layer_type': ['dense', 'batch_norm', 'dropout', 'dense', 'batch_norm'], 'n_nodes': [4, 16, 8, 8, 4], 'activation': ['elu', 'tanh', 'exponential', 'exponential', 'sigmoid'], 'dropout': [0.2, 0.1, 0.1, 0.1, 0.1]}, 'io_config': {'input_shape': 7, 'inputs': ['the', 'omega', 'NCaR_angle', 'end_Ca_end_angle', 'phi', 'OO_distance', 'psi'], 'output_shape': 24, 'outputs': ['custom']}}
+Completed testing with nan val_loss
+
+Training network 2 of 49: adam_5000
+Training time: 30.005656719207764, training val_loss: 0.015493758022785187
+Test time: 0.27001285552978516, testing loss: 0.015479483641684055
+{'network_config': {'n_layers': 4, 'batch_size': 5000, 'optimizer': 'adam', 'epochs': 500}, 'layer_config': {'layer_type': ['batch_norm_dropout', 'batch_norm_dropout', 'dense', 'batch_norm'], 'n_nodes': [4, 4, 8, 8], 'activation': ['tanh', 'tanh', 'selu', 'sigmoid'], 'dropout': [0.2, 0.1, 0.2, 0.2]}, 'io_config': {'input_shape': 7, 'inputs': ['psi', 'omega', 'end_Ca_end_angle', 'the', 'phi', 'OO_distance', 'NCaR_angle'], 'output_shape': 24, 'outputs': ['custom']}}
+Completed testing with 0.03173294146545231 val_loss
+
+Training network 3 of 49: adam_5000
+Training time: 8.17933702468872, training val_loss: 0.017898013815283775
+Test time: 0.25525379180908203, testing loss: 0.017899978905916214
+{'network_config': {'n_layers': 3, 'batch_size': 5000, 'optimizer': 'adam', 'epochs': 500}, 'layer_config': {'layer_type': ['dropout', 'batch_norm', 'batch_norm'], 'n_nodes': [16, 16, 4], 'activation': ['sigmoid', 'exponential', 'elu'], 'dropout': [0.1, 0.1, 0.2]}, 'io_config': {'input_shape': 7, 'inputs': ['psi', 'the', 'phi', 'end_Ca_end_angle', 'OO_distance', 'omega', 'NCaR_angle'], 'output_shape': 24, 'outputs': ['custom']}}
+Completed testing with 0.036694956757128236 val_loss
+
+Training network 4 of 49: adam_5000
+Training time: 6.9683380126953125, training val_loss: 0.07204025983810425
+Test time: 0.2621908187866211, testing loss: 0.07196599990129471
+{'network_config': {'n_layers': 3, 'batch_size': 5000, 'optimizer': 'adam', 'epochs': 500}, 'layer_config': {'layer_type': ['batch_norm_dropout', 'batch_norm_dropout', 'batch_norm_dropout'], 'n_nodes': [8, 8, 4], 'activation': ['exponential', 'selu', 'sigmoid'], 'dropout': [0.1, 0.1, 0.1]}, 'io_config': {'input_shape': 7, 'inputs': ['OO_distance', 'end_Ca_end_angle', 'psi', 'phi', 'the', 'NCaR_angle', 'omega'], 'output_shape': 24, 'outputs': ['custom']}}
+Completed testing with 0.14753029979765414 val_loss
+
+Training network 5 of 49: adam_5000
+Training time: 4.5985331535339355, training val_loss: 0.08306069672107697
+Test time: 0.24304723739624023, testing loss: 0.08288390934467316
+{'network_config': {'n_layers': 2, 'batch_size': 5000, 'optimizer': 'adam', 'epochs': 500}, 'layer_config': {'layer_type': ['dense', 'batch_norm_dropout'], 'n_nodes': [32, 8], 'activation': ['exponential', 'sigmoid'], 'dropout': [0.1, 0.1]}, 'io_config': {'input_shape': 7, 'inputs': ['psi', 'end_Ca_end_angle', 'phi', 'NCaR_angle', 'OO_distance', 'omega', 'the'], 'output_shape': 24, 'outputs': ['custom']}}
+Completed testing with 0.16991201415657994 val_loss
+
+Training network 6 of 49: adam_5000
+Training time: 6.674692869186401, training val_loss: 0.07695929706096649
+Test time: 0.24141287803649902, testing loss: 0.0770968645811081
+{'network_config': {'n_layers': 2, 'batch_size': 5000, 'optimizer': 'adam', 'epochs': 500}, 'layer_config': {'layer_type': ['dense', 'batch_norm_dropout'], 'n_nodes': [8, 4], 'activation': ['elu', 'selu'], 'dropout': [0.2, 0.1]}, 'io_config': {'input_shape': 7, 'inputs': ['psi', 'end_Ca_end_angle', 'omega', 'the', 'phi', 'OO_distance', 'NCaR_angle'], 'output_shape': 24, 'outputs': ['custom']}}
+Completed testing with 0.15804857239127157 val_loss
+
+Training network 7 of 49: adam_5000
+Training time: 11.188215017318726, training val_loss: 0.019069993868470192
+Test time: 0.2537519931793213, testing loss: 0.019081296399235725
+{'network_config': {'n_layers': 4, 'batch_size': 5000, 'optimizer': 'adam', 'epochs': 500}, 'layer_config': {'layer_type': ['dropout', 'dropout', 'batch_norm_dropout', 'batch_norm'], 'n_nodes': [8, 16, 4, 4], 'activation': ['linear', 'tanh', 'elu', 'sigmoid'], 'dropout': [0.2, 0.2, 0.2, 0.1]}, 'io_config': {'input_shape': 7, 'inputs': ['OO_distance', 'NCaR_angle', 'psi', 'the', 'end_Ca_end_angle', 'omega', 'phi'], 'output_shape': 24, 'outputs': ['custom']}}
+Completed testing with 0.039116657618433234 val_loss
+
+Training network 8 of 49: adam_5000
+Training time: 13.724431037902832, training val_loss: 0.017634352669119835
+Test time: 0.3005790710449219, testing loss: 0.017588132992386818
+{'network_config': {'n_layers': 4, 'batch_size': 5000, 'optimizer': 'adam', 'epochs': 500}, 'layer_config': {'layer_type': ['batch_norm', 'batch_norm', 'batch_norm', 'dense'], 'n_nodes': [16, 32, 8, 32], 'activation': ['elu', 'relu', 'linear', 'tanh'], 'dropout': [0.1, 0.2, 0.1, 0.2]}, 'io_config': {'input_shape': 7, 'inputs': ['OO_distance', 'psi', 'NCaR_angle', 'phi', 'the', 'omega', 'end_Ca_end_angle'], 'output_shape': 24, 'outputs': ['custom']}}
+Completed testing with 0.03605567263439297 val_loss
+
+Training network 9 of 49: adam_5000
+Training time: 17.548625230789185, training val_loss: 0.01560040470212698
+Test time: 0.23960089683532715, testing loss: 0.01558417733758688
+{'network_config': {'n_layers': 2, 'batch_size': 5000, 'optimizer': 'adam', 'epochs': 500}, 'layer_config': {'layer_type': ['dense', 'dense'], 'n_nodes': [32, 16], 'activation': ['elu', 'tanh'], 'dropout': [0.1, 0.1]}, 'io_config': {'input_shape': 7, 'inputs': ['end_Ca_end_angle', 'phi', 'OO_distance', 'the', 'psi', 'NCaR_angle', 'omega'], 'output_shape': 24, 'outputs': ['custom']}}
+Completed testing with 0.0319475635420531 val_loss
+
+Training network 10 of 49: adam_5000
+Training time: 6.542935132980347, training val_loss: 0.3506772518157959
+Test time: 0.26505303382873535, testing loss: 0.34844478964805603
+{'network_config': {'n_layers': 4, 'batch_size': 5000, 'optimizer': 'adam', 'epochs': 500}, 'layer_config': {'layer_type': ['batch_norm_dropout', 'dense', 'dense', 'batch_norm_dropout'], 'n_nodes': [4, 32, 4, 4], 'activation': ['sigmoid', 'exponential', 'exponential', 'relu'], 'dropout': [0.1, 0.1, 0.1, 0.2]}, 'io_config': {'input_shape': 7, 'inputs': ['the', 'OO_distance', 'NCaR_angle', 'end_Ca_end_angle', 'phi', 'omega', 'psi'], 'output_shape': 24, 'outputs': ['custom']}}
+Completed testing with 0.7143118187785148 val_loss
+
+Training network 11 of 49: adam_5000
+Training time: 23.760518074035645, training val_loss: 0.016081906855106354
+Test time: 0.25823307037353516, testing loss: 0.016076385974884033
+{'network_config': {'n_layers': 3, 'batch_size': 5000, 'optimizer': 'adam', 'epochs': 500}, 'layer_config': {'layer_type': ['batch_norm_dropout', 'dropout', 'batch_norm'], 'n_nodes': [8, 8, 32], 'activation': ['elu', 'linear', 'exponential'], 'dropout': [0.1, 0.2, 0.1]}, 'io_config': {'input_shape': 7, 'inputs': ['end_Ca_end_angle', 'OO_distance', 'psi', 'NCaR_angle', 'the', 'omega', 'phi'], 'output_shape': 24, 'outputs': ['custom']}}
+Completed testing with 0.03295659124851227 val_loss
+
+Training network 12 of 49: adam_5000
+Training time: 5.2967119216918945, training val_loss: 0.08919019997119904
+Test time: 0.2566196918487549, testing loss: 0.0891718715429306
+{'network_config': {'n_layers': 3, 'batch_size': 5000, 'optimizer': 'adam', 'epochs': 500}, 'layer_config': {'layer_type': ['batch_norm', 'dense', 'dropout'], 'n_nodes': [4, 32, 4], 'activation': ['relu', 'tanh', 'elu'], 'dropout': [0.2, 0.2, 0.1]}, 'io_config': {'input_shape': 7, 'inputs': ['psi', 'phi', 'OO_distance', 'the', 'omega', 'end_Ca_end_angle', 'NCaR_angle'], 'output_shape': 24, 'outputs': ['custom']}}
+Completed testing with 0.18280233666300771 val_loss
+
+Training network 13 of 49: adam_5000
+Training time: 21.60689091682434, training val_loss: 0.015482597053050995
+Test time: 0.26180100440979004, testing loss: 0.015470421873033047
+{'network_config': {'n_layers': 2, 'batch_size': 5000, 'optimizer': 'adam', 'epochs': 500}, 'layer_config': {'layer_type': ['dropout', 'dense'], 'n_nodes': [16, 4], 'activation': ['relu', 'tanh'], 'dropout': [0.1, 0.2]}, 'io_config': {'input_shape': 7, 'inputs': ['phi', 'OO_distance', 'omega', 'psi', 'NCaR_angle', 'end_Ca_end_angle', 'the'], 'output_shape': 24, 'outputs': ['custom']}}
+Completed testing with 0.03171436483971774 val_loss
+
+Training network 14 of 49: adam_5000
+Training time: 21.283746242523193, training val_loss: 0.01603834517300129
+Test time: 0.2875819206237793, testing loss: 0.01606544479727745
+{'network_config': {'n_layers': 4, 'batch_size': 5000, 'optimizer': 'adam', 'epochs': 500}, 'layer_config': {'layer_type': ['batch_norm_dropout', 'dense', 'dropout', 'dense'], 'n_nodes': [4, 32, 4, 16], 'activation': ['elu', 'tanh', 'exponential', 'selu'], 'dropout': [0.2, 0.2, 0.1, 0.2]}, 'io_config': {'input_shape': 7, 'inputs': ['the', 'omega', 'NCaR_angle', 'phi', 'OO_distance', 'end_Ca_end_angle', 'psi'], 'output_shape': 24, 'outputs': ['custom']}}
+Completed testing with 0.032934161834418774 val_loss
+
+Training network 15 of 49: adam_5000
+Training time: 23.03186798095703, training val_loss: 0.015512323006987572
+Test time: 0.2790846824645996, testing loss: 0.015503874979913235
+{'network_config': {'n_layers': 4, 'batch_size': 5000, 'optimizer': 'adam', 'epochs': 500}, 'layer_config': {'layer_type': ['batch_norm', 'batch_norm', 'batch_norm', 'dense'], 'n_nodes': [16, 8, 16, 4], 'activation': ['elu', 'selu', 'tanh', 'sigmoid'], 'dropout': [0.1, 0.2, 0.1, 0.2]}, 'io_config': {'input_shape': 7, 'inputs': ['NCaR_angle', 'end_Ca_end_angle', 'the', 'psi', 'omega', 'OO_distance', 'phi'], 'output_shape': 24, 'outputs': ['custom']}}
+Completed testing with 0.03178294370882213 val_loss
+
+Training network 16 of 49: adam_5000
+Training time: 14.656903982162476, training val_loss: 0.015492897480726242
+Test time: 0.2663390636444092, testing loss: 0.015480993315577507
+{'network_config': {'n_layers': 5, 'batch_size': 5000, 'optimizer': 'adam', 'epochs': 500}, 'layer_config': {'layer_type': ['dropout', 'batch_norm', 'batch_norm', 'dropout', 'dense'], 'n_nodes': [8, 4, 16, 16, 16], 'activation': ['relu', 'tanh', 'sigmoid', 'elu', 'tanh'], 'dropout': [0.2, 0.1, 0.1, 0.2, 0.1]}, 'io_config': {'input_shape': 7, 'inputs': ['end_Ca_end_angle', 'the', 'phi', 'OO_distance', 'omega', 'psi', 'NCaR_angle'], 'output_shape': 24, 'outputs': ['custom']}}
+Completed testing with 0.03173603629693389 val_loss
+
+Training network 17 of 49: adam_5000
+Training time: 17.031311988830566, training val_loss: 0.015467094257473946
+Test time: 0.2899799346923828, testing loss: 0.015452655963599682
+{'network_config': {'n_layers': 2, 'batch_size': 5000, 'optimizer': 'adam', 'epochs': 500}, 'layer_config': {'layer_type': ['batch_norm', 'batch_norm'], 'n_nodes': [32, 4], 'activation': ['tanh', 'sigmoid'], 'dropout': [0.2, 0.1]}, 'io_config': {'input_shape': 7, 'inputs': ['OO_distance', 'phi', 'end_Ca_end_angle', 'NCaR_angle', 'omega', 'the', 'psi'], 'output_shape': 24, 'outputs': ['custom']}}
+Completed testing with 0.031677944725379346 val_loss
+
+Training network 18 of 49: adam_5000
+Training time: 8.655096054077148, training val_loss: 0.021650277078151703
+Test time: 0.2613179683685303, testing loss: 0.02163020893931389
+{'network_config': {'n_layers': 3, 'batch_size': 5000, 'optimizer': 'adam', 'epochs': 500}, 'layer_config': {'layer_type': ['dropout', 'batch_norm', 'batch_norm_dropout'], 'n_nodes': [4, 16, 32], 'activation': ['tanh', 'tanh', 'linear'], 'dropout': [0.1, 0.1, 0.2]}, 'io_config': {'input_shape': 7, 'inputs': ['psi', 'omega', 'phi', 'OO_distance', 'end_Ca_end_angle', 'NCaR_angle', 'the'], 'output_shape': 24, 'outputs': ['custom']}}
+Completed testing with 0.044341928325593465 val_loss
+
+Training network 19 of 49: adam_5000
+Training time: 10.355232954025269, training val_loss: 0.021247776225209236
+Test time: 0.27409791946411133, testing loss: 0.021333452314138412
+{'network_config': {'n_layers': 4, 'batch_size': 5000, 'optimizer': 'adam', 'epochs': 500}, 'layer_config': {'layer_type': ['batch_norm', 'batch_norm_dropout', 'dropout', 'batch_norm'], 'n_nodes': [8, 16, 32, 4], 'activation': ['exponential', 'selu', 'sigmoid', 'relu'], 'dropout': [0.1, 0.2, 0.1, 0.2]}, 'io_config': {'input_shape': 7, 'inputs': ['psi', 'phi', 'NCaR_angle', 'end_Ca_end_angle', 'OO_distance', 'the', 'omega'], 'output_shape': 24, 'outputs': ['custom']}}
+Completed testing with 0.04373357724398374 val_loss
+
+Training network 20 of 49: adam_5000
+Training time: 23.712545156478882, training val_loss: 0.037680454552173615
+Test time: 0.2586369514465332, testing loss: 0.03766597434878349
+{'network_config': {'n_layers': 4, 'batch_size': 5000, 'optimizer': 'adam', 'epochs': 500}, 'layer_config': {'layer_type': ['dense', 'batch_norm_dropout', 'batch_norm_dropout', 'batch_norm_dropout'], 'n_nodes': [16, 8, 8, 8], 'activation': ['exponential', 'elu', 'tanh', 'sigmoid'], 'dropout': [0.2, 0.1, 0.1, 0.2]}, 'io_config': {'input_shape': 7, 'inputs': ['omega', 'phi', 'NCaR_angle', 'end_Ca_end_angle', 'psi', 'OO_distance', 'the'], 'output_shape': 24, 'outputs': ['custom']}}
+Completed testing with 0.07721524741500616 val_loss
+
+Training network 21 of 49: adam_5000
+Training time: 10.663280963897705, training val_loss: 0.12061747163534164
+Test time: 0.2520310878753662, testing loss: 0.1205778568983078
+{'network_config': {'n_layers': 2, 'batch_size': 5000, 'optimizer': 'adam', 'epochs': 500}, 'layer_config': {'layer_type': ['batch_norm', 'batch_norm_dropout'], 'n_nodes': [32, 4], 'activation': ['linear', 'elu'], 'dropout': [0.2, 0.2]}, 'io_config': {'input_shape': 7, 'inputs': ['omega', 'psi', 'phi', 'NCaR_angle', 'OO_distance', 'end_Ca_end_angle', 'the'], 'output_shape': 24, 'outputs': ['custom']}}
+Completed testing with 0.24718460664153097 val_loss
+
+Training network 22 of 49: adam_5000
+Training time: 2.6130590438842773, training val_loss: nan
+Test time: 0.2705364227294922, testing loss: nan
+{'network_config': {'n_layers': 5, 'batch_size': 5000, 'optimizer': 'adam', 'epochs': 500}, 'layer_config': {'layer_type': ['dense', 'dense', 'batch_norm_dropout', 'batch_norm_dropout', 'batch_norm_dropout'], 'n_nodes': [8, 8, 16, 32, 4], 'activation': ['tanh', 'selu', 'exponential', 'exponential', 'linear'], 'dropout': [0.1, 0.1, 0.1, 0.1, 0.1]}, 'io_config': {'input_shape': 7, 'inputs': ['the', 'end_Ca_end_angle', 'psi', 'NCaR_angle', 'omega', 'OO_distance', 'phi'], 'output_shape': 24, 'outputs': ['custom']}}
+Completed testing with nan val_loss
+
+Training network 23 of 49: adam_5000
+Training time: 5.203943252563477, training val_loss: 0.08129821717739105
+Test time: 0.27095866203308105, testing loss: 0.08129721134901047
+{'network_config': {'n_layers': 5, 'batch_size': 5000, 'optimizer': 'adam', 'epochs': 500}, 'layer_config': {'layer_type': ['batch_norm', 'batch_norm', 'dropout', 'batch_norm', 'dropout'], 'n_nodes': [4, 4, 8, 4, 4], 'activation': ['exponential', 'sigmoid', 'sigmoid', 'linear', 'tanh'], 'dropout': [0.1, 0.1, 0.1, 0.2, 0.1]}, 'io_config': {'input_shape': 7, 'inputs': ['NCaR_angle', 'OO_distance', 'omega', 'the', 'end_Ca_end_angle', 'psi', 'phi'], 'output_shape': 24, 'outputs': ['custom']}}
+Completed testing with 0.16665928326547144 val_loss
+
+Training network 24 of 49: adam_5000
+Training time: 9.067604780197144, training val_loss: 0.027437692508101463
+Test time: 0.3084869384765625, testing loss: 0.027279071509838104
+{'network_config': {'n_layers': 5, 'batch_size': 5000, 'optimizer': 'adam', 'epochs': 500}, 'layer_config': {'layer_type': ['batch_norm_dropout', 'dropout', 'dense', 'batch_norm_dropout', 'batch_norm'], 'n_nodes': [32, 4, 16, 4, 16], 'activation': ['selu', 'tanh', 'elu', 'linear', 'tanh'], 'dropout': [0.2, 0.2, 0.2, 0.2, 0.1]}, 'io_config': {'input_shape': 7, 'inputs': ['the', 'psi', 'omega', 'phi', 'OO_distance', 'NCaR_angle', 'end_Ca_end_angle'], 'output_shape': 24, 'outputs': ['custom']}}
+Completed testing with 0.05592209659516811 val_loss
+
+Training network 25 of 49: adam_5000
+Training time: 3.1397628784179688, training val_loss: 0.4561377763748169
+Test time: 0.272083044052124, testing loss: 0.4562014937400818
+{'network_config': {'n_layers': 4, 'batch_size': 5000, 'optimizer': 'adam', 'epochs': 500}, 'layer_config': {'layer_type': ['dense', 'dropout', 'batch_norm_dropout', 'dropout'], 'n_nodes': [16, 32, 16, 8], 'activation': ['sigmoid', 'elu', 'tanh', 'linear'], 'dropout': [0.1, 0.1, 0.2, 0.2]}, 'io_config': {'input_shape': 7, 'inputs': ['end_Ca_end_angle', 'psi', 'omega', 'phi', 'OO_distance', 'the', 'NCaR_angle'], 'output_shape': 24, 'outputs': ['custom']}}
+Completed testing with 0.9352130621671676 val_loss
+
+Training network 26 of 49: adam_5000
+Training time: 7.931915998458862, training val_loss: 0.03488580510020256
+Test time: 0.28375697135925293, testing loss: 0.03492296487092972
+{'network_config': {'n_layers': 5, 'batch_size': 5000, 'optimizer': 'adam', 'epochs': 500}, 'layer_config': {'layer_type': ['batch_norm_dropout', 'batch_norm_dropout', 'batch_norm', 'batch_norm', 'batch_norm_dropout'], 'n_nodes': [4, 16, 32, 4, 8], 'activation': ['linear', 'relu', 'exponential', 'relu', 'selu'], 'dropout': [0.1, 0.2, 0.1, 0.1, 0.1]}, 'io_config': {'input_shape': 7, 'inputs': ['psi', 'NCaR_angle', 'end_Ca_end_angle', 'OO_distance', 'the', 'omega', 'phi'], 'output_shape': 24, 'outputs': ['custom']}}
+Completed testing with 0.07159207798540591 val_loss
+
+Training network 27 of 49: adam_5000
+Training time: 23.266737937927246, training val_loss: 0.025247441604733467
+Test time: 0.2541177272796631, testing loss: 0.025234127417206764
+{'network_config': {'n_layers': 4, 'batch_size': 5000, 'optimizer': 'adam', 'epochs': 500}, 'layer_config': {'layer_type': ['dense', 'dense', 'dropout', 'dropout'], 'n_nodes': [16, 8, 4, 16], 'activation': ['exponential', 'sigmoid', 'elu', 'sigmoid'], 'dropout': [0.1, 0.1, 0.1, 0.1]}, 'io_config': {'input_shape': 7, 'inputs': ['phi', 'OO_distance', 'NCaR_angle', 'end_Ca_end_angle', 'the', 'omega', 'psi'], 'output_shape': 24, 'outputs': ['custom']}}
+Completed testing with 0.051729961205273865 val_loss
+
+Training network 28 of 49: adam_5000
+Training time: 10.409517765045166, training val_loss: 0.02450970560312271
+Test time: 0.26352405548095703, testing loss: 0.02450176328420639
+{'network_config': {'n_layers': 4, 'batch_size': 5000, 'optimizer': 'adam', 'epochs': 500}, 'layer_config': {'layer_type': ['dropout', 'batch_norm_dropout', 'batch_norm_dropout', 'batch_norm_dropout'], 'n_nodes': [8, 4, 8, 32], 'activation': ['sigmoid', 'linear', 'linear', 'linear'], 'dropout': [0.1, 0.1, 0.2, 0.2]}, 'io_config': {'input_shape': 7, 'inputs': ['OO_distance', 'end_Ca_end_angle', 'phi', 'the', 'omega', 'NCaR_angle', 'psi'], 'output_shape': 24, 'outputs': ['custom']}}
+Completed testing with 0.0502286147326231 val_loss
+
+Training network 29 of 49: adam_5000
+Training time: 3.823497772216797, training val_loss: 0.17243395745754242
+Test time: 0.263948917388916, testing loss: 0.17217673361301422
+{'network_config': {'n_layers': 3, 'batch_size': 5000, 'optimizer': 'adam', 'epochs': 500}, 'layer_config': {'layer_type': ['dropout', 'dense', 'batch_norm_dropout'], 'n_nodes': [8, 16, 16], 'activation': ['linear', 'selu', 'linear'], 'dropout': [0.2, 0.1, 0.1]}, 'io_config': {'input_shape': 7, 'inputs': ['NCaR_angle', 'OO_distance', 'the', 'omega', 'phi', 'psi', 'end_Ca_end_angle'], 'output_shape': 24, 'outputs': ['custom']}}
+Completed testing with 0.3529623039066791 val_loss
+
+Training network 30 of 49: adam_5000
+Training time: 11.850471019744873, training val_loss: 0.015578118152916431
+Test time: 0.2544991970062256, testing loss: 0.015563818626105785
+{'network_config': {'n_layers': 3, 'batch_size': 5000, 'optimizer': 'adam', 'epochs': 500}, 'layer_config': {'layer_type': ['dense', 'dropout', 'batch_norm'], 'n_nodes': [16, 8, 8], 'activation': ['linear', 'linear', 'linear'], 'dropout': [0.2, 0.1, 0.2]}, 'io_config': {'input_shape': 7, 'inputs': ['psi', 'omega', 'the', 'OO_distance', 'NCaR_angle', 'end_Ca_end_angle', 'phi'], 'output_shape': 24, 'outputs': ['custom']}}
+Completed testing with 0.03190582818351686 val_loss
+
+Training network 31 of 49: adam_5000
+Training time: 6.475186109542847, training val_loss: 0.050203632563352585
+Test time: 0.2515900135040283, testing loss: 0.049961671233177185
+{'network_config': {'n_layers': 4, 'batch_size': 5000, 'optimizer': 'adam', 'epochs': 500}, 'layer_config': {'layer_type': ['dense', 'dense', 'batch_norm_dropout', 'dense'], 'n_nodes': [16, 16, 32, 4], 'activation': ['linear', 'elu', 'exponential', 'selu'], 'dropout': [0.1, 0.2, 0.1, 0.1]}, 'io_config': {'input_shape': 7, 'inputs': ['omega', 'end_Ca_end_angle', 'the', 'OO_distance', 'phi', 'NCaR_angle', 'psi'], 'output_shape': 24, 'outputs': ['custom']}}
+Completed testing with 0.10242142602801323 val_loss
+
+Training network 32 of 49: adam_5000
+Training time: 2.6150810718536377, training val_loss: 0.057090867310762405
+Test time: 0.23876309394836426, testing loss: 0.0570446252822876
+{'network_config': {'n_layers': 2, 'batch_size': 5000, 'optimizer': 'adam', 'epochs': 500}, 'layer_config': {'layer_type': ['batch_norm', 'dense'], 'n_nodes': [32, 32], 'activation': ['tanh', 'exponential'], 'dropout': [0.1, 0.2]}, 'io_config': {'input_shape': 7, 'inputs': ['the', 'end_Ca_end_angle', 'psi', 'omega', 'phi', 'OO_distance', 'NCaR_angle'], 'output_shape': 24, 'outputs': ['custom']}}
+Completed testing with 0.11694148182868956 val_loss
+
+Training network 33 of 49: adam_5000
+Training time: 16.648576021194458, training val_loss: 0.039810094982385635
+Test time: 0.27728986740112305, testing loss: 0.03980182483792305
+{'network_config': {'n_layers': 2, 'batch_size': 5000, 'optimizer': 'adam', 'epochs': 500}, 'layer_config': {'layer_type': ['dropout', 'batch_norm_dropout'], 'n_nodes': [8, 8], 'activation': ['selu', 'sigmoid'], 'dropout': [0.1, 0.2]}, 'io_config': {'input_shape': 7, 'inputs': ['OO_distance', 'the', 'NCaR_angle', 'omega', 'end_Ca_end_angle', 'phi', 'psi'], 'output_shape': 24, 'outputs': ['custom']}}
+Completed testing with 0.08159374091774224 val_loss
+
+Training network 34 of 49: adam_5000
+Training time: 12.432210922241211, training val_loss: 0.015502032823860645
+Test time: 0.2885308265686035, testing loss: 0.015479915775358677
+{'network_config': {'n_layers': 4, 'batch_size': 5000, 'optimizer': 'adam', 'epochs': 500}, 'layer_config': {'layer_type': ['batch_norm_dropout', 'dropout', 'dropout', 'batch_norm'], 'n_nodes': [4, 32, 4, 16], 'activation': ['linear', 'tanh', 'exponential', 'linear'], 'dropout': [0.1, 0.1, 0.1, 0.2]}, 'io_config': {'input_shape': 7, 'inputs': ['OO_distance', 'phi', 'NCaR_angle', 'omega', 'psi', 'the', 'end_Ca_end_angle'], 'output_shape': 24, 'outputs': ['custom']}}
+Completed testing with 0.031733827339485286 val_loss
+
+Training network 35 of 49: adam_5000
+Training time: 13.053755044937134, training val_loss: 0.015923013910651207
+Test time: 0.2813727855682373, testing loss: 0.015902521088719368
+{'network_config': {'n_layers': 2, 'batch_size': 5000, 'optimizer': 'adam', 'epochs': 500}, 'layer_config': {'layer_type': ['batch_norm', 'dense'], 'n_nodes': [16, 32], 'activation': ['sigmoid', 'exponential'], 'dropout': [0.1, 0.2]}, 'io_config': {'input_shape': 7, 'inputs': ['the', 'NCaR_angle', 'psi', 'end_Ca_end_angle', 'omega', 'OO_distance', 'phi'], 'output_shape': 24, 'outputs': ['custom']}}
+Completed testing with 0.0326001682318747 val_loss
+
+Training network 36 of 49: adam_5000
+Training time: 15.580250978469849, training val_loss: 0.04928957298398018
+Test time: 0.2515370845794678, testing loss: 0.049271050840616226
+{'network_config': {'n_layers': 4, 'batch_size': 5000, 'optimizer': 'adam', 'epochs': 500}, 'layer_config': {'layer_type': ['dense', 'batch_norm_dropout', 'batch_norm_dropout', 'dropout'], 'n_nodes': [16, 4, 16, 8], 'activation': ['exponential', 'sigmoid', 'relu', 'tanh'], 'dropout': [0.1, 0.2, 0.2, 0.2]}, 'io_config': {'input_shape': 7, 'inputs': ['psi', 'phi', 'the', 'end_Ca_end_angle', 'NCaR_angle', 'OO_distance', 'omega'], 'output_shape': 24, 'outputs': ['custom']}}
+Completed testing with 0.10100565422326326 val_loss
+
+Training network 37 of 49: adam_5000
+Training time: 4.669656991958618, training val_loss: 0.06385969370603561
+Test time: 0.25664806365966797, testing loss: 0.06396494060754776
+{'network_config': {'n_layers': 4, 'batch_size': 5000, 'optimizer': 'adam', 'epochs': 500}, 'layer_config': {'layer_type': ['dropout', 'batch_norm_dropout', 'dense', 'dropout'], 'n_nodes': [4, 4, 16, 4], 'activation': ['tanh', 'relu', 'tanh', 'linear'], 'dropout': [0.1, 0.2, 0.2, 0.1]}, 'io_config': {'input_shape': 7, 'inputs': ['the', 'NCaR_angle', 'psi', 'end_Ca_end_angle', 'omega', 'OO_distance', 'phi'], 'output_shape': 24, 'outputs': ['custom']}}
+Completed testing with 0.1311281282454729 val_loss
+
+Training network 38 of 49: adam_5000
+Training time: 15.074636936187744, training val_loss: 0.015482982620596886
+Test time: 0.26262497901916504, testing loss: 0.015470006503164768
+{'network_config': {'n_layers': 2, 'batch_size': 5000, 'optimizer': 'adam', 'epochs': 500}, 'layer_config': {'layer_type': ['batch_norm', 'dense'], 'n_nodes': [32, 8], 'activation': ['sigmoid', 'sigmoid'], 'dropout': [0.1, 0.1]}, 'io_config': {'input_shape': 7, 'inputs': ['the', 'end_Ca_end_angle', 'OO_distance', 'phi', 'psi', 'omega', 'NCaR_angle'], 'output_shape': 24, 'outputs': ['custom']}}
+Completed testing with 0.03171351333148777 val_loss
+
+Training network 39 of 49: adam_5000
+Training time: 8.122601985931396, training val_loss: 0.0867580845952034
+Test time: 0.26842498779296875, testing loss: 0.08675668388605118
+{'network_config': {'n_layers': 5, 'batch_size': 5000, 'optimizer': 'adam', 'epochs': 500}, 'layer_config': {'layer_type': ['dropout', 'batch_norm_dropout', 'batch_norm', 'dense', 'dropout'], 'n_nodes': [4, 32, 32, 4, 4], 'activation': ['sigmoid', 'linear', 'linear', 'elu', 'exponential'], 'dropout': [0.2, 0.2, 0.2, 0.2, 0.1]}, 'io_config': {'input_shape': 7, 'inputs': ['psi', 'OO_distance', 'end_Ca_end_angle', 'NCaR_angle', 'the', 'omega', 'phi'], 'output_shape': 24, 'outputs': ['custom']}}
+Completed testing with 0.1778512019664049 val_loss
+
+Training network 40 of 49: adam_5000
+Training time: 38.591821908950806, training val_loss: 0.016003860160708427
+Test time: 0.24799060821533203, testing loss: 0.015983304008841515
+{'network_config': {'n_layers': 2, 'batch_size': 5000, 'optimizer': 'adam', 'epochs': 500}, 'layer_config': {'layer_type': ['batch_norm_dropout', 'batch_norm_dropout'], 'n_nodes': [32, 8], 'activation': ['exponential', 'exponential'], 'dropout': [0.1, 0.2]}, 'io_config': {'input_shape': 7, 'inputs': ['end_Ca_end_angle', 'OO_distance', 'the', 'NCaR_angle', 'omega', 'psi', 'phi'], 'output_shape': 24, 'outputs': ['custom']}}
+Completed testing with 0.0327657732181251 val_loss
+
+Training network 41 of 49: adam_5000
+Training time: 3.9622550010681152, training val_loss: 0.5172361731529236
+Test time: 0.2980978488922119, testing loss: 0.5213382244110107
+{'network_config': {'n_layers': 4, 'batch_size': 5000, 'optimizer': 'adam', 'epochs': 500}, 'layer_config': {'layer_type': ['batch_norm_dropout', 'batch_norm', 'batch_norm_dropout', 'dropout'], 'n_nodes': [4, 4, 16, 16], 'activation': ['selu', 'exponential', 'linear', 'exponential'], 'dropout': [0.1, 0.1, 0.2, 0.2]}, 'io_config': {'input_shape': 7, 'inputs': ['phi', 'psi', 'OO_distance', 'the', 'end_Ca_end_angle', 'NCaR_angle', 'omega'], 'output_shape': 24, 'outputs': ['custom']}}
+Completed testing with 1.068743360042572 val_loss
+
+Training network 42 of 49: adam_5000
+Training time: 5.088778018951416, training val_loss: 0.5731877684593201
+Test time: 0.3086228370666504, testing loss: 0.5689669251441956
+{'network_config': {'n_layers': 5, 'batch_size': 5000, 'optimizer': 'adam', 'epochs': 500}, 'layer_config': {'layer_type': ['batch_norm', 'dense', 'batch_norm_dropout', 'batch_norm', 'batch_norm_dropout'], 'n_nodes': [16, 8, 8, 16, 4], 'activation': ['selu', 'relu', 'sigmoid', 'linear', 'linear'], 'dropout': [0.1, 0.2, 0.1, 0.2, 0.2]}, 'io_config': {'input_shape': 7, 'inputs': ['psi', 'omega', 'the', 'phi', 'NCaR_angle', 'OO_distance', 'end_Ca_end_angle'], 'output_shape': 24, 'outputs': ['custom']}}
+Completed testing with 1.1663821965456007 val_loss
+
+Training network 43 of 49: adam_5000
+Training time: 4.942704200744629, training val_loss: 0.08625178784132004
+Test time: 0.37379002571105957, testing loss: 0.08582206815481186
+{'network_config': {'n_layers': 2, 'batch_size': 5000, 'optimizer': 'adam', 'epochs': 500}, 'layer_config': {'layer_type': ['dropout', 'batch_norm'], 'n_nodes': [8, 8], 'activation': ['elu', 'tanh'], 'dropout': [0.2, 0.1]}, 'io_config': {'input_shape': 7, 'inputs': ['phi', 'omega', 'psi', 'end_Ca_end_angle', 'NCaR_angle', 'OO_distance', 'the'], 'output_shape': 24, 'outputs': ['custom']}}
+Completed testing with 0.1759352397173643 val_loss
+
+Training network 44 of 49: adam_5000
+Training time: 10.306059122085571, training val_loss: 0.02367301471531391
+Test time: 0.2619137763977051, testing loss: 0.023628266528248787
+{'network_config': {'n_layers': 3, 'batch_size': 5000, 'optimizer': 'adam', 'epochs': 500}, 'layer_config': {'layer_type': ['dense', 'batch_norm_dropout', 'dense'], 'n_nodes': [32, 16, 32], 'activation': ['tanh', 'linear', 'elu'], 'dropout': [0.2, 0.1, 0.1]}, 'io_config': {'input_shape': 7, 'inputs': ['omega', 'the', 'end_Ca_end_angle', 'psi', 'NCaR_angle', 'OO_distance', 'phi'], 'output_shape': 24, 'outputs': ['custom']}}
+Completed testing with 0.04843794638291001 val_loss
+
+Training network 45 of 49: adam_5000
+Training time: 4.678027629852295, training val_loss: 0.2198973149061203
+Test time: 0.25280308723449707, testing loss: 0.21947592496871948
+{'network_config': {'n_layers': 3, 'batch_size': 5000, 'optimizer': 'adam', 'epochs': 500}, 'layer_config': {'layer_type': ['batch_norm', 'dropout', 'batch_norm_dropout'], 'n_nodes': [8, 16, 4], 'activation': ['sigmoid', 'linear', 'linear'], 'dropout': [0.2, 0.2, 0.1]}, 'io_config': {'input_shape': 7, 'inputs': ['psi', 'end_Ca_end_angle', 'phi', 'OO_distance', 'NCaR_angle', 'omega', 'the'], 'output_shape': 24, 'outputs': ['custom']}}
+Completed testing with 0.4499256461858749 val_loss
+
+Training network 46 of 49: adam_5000
+Training time: 3612.0545020103455, training val_loss: 0.015475763007998466
+Test time: 0.2558019161224365, testing loss: 0.015463176183402538
+{'network_config': {'n_layers': 5, 'batch_size': 5000, 'optimizer': 'adam', 'epochs': 500}, 'layer_config': {'layer_type': ['dropout', 'batch_norm_dropout', 'batch_norm_dropout', 'dense', 'dense'], 'n_nodes': [16, 16, 16, 4, 16], 'activation': ['sigmoid', 'tanh', 'selu', 'sigmoid', 'linear'], 'dropout': [0.2, 0.2, 0.2, 0.1, 0.2]}, 'io_config': {'input_shape': 7, 'inputs': ['omega', 'end_Ca_end_angle', 'psi', 'NCaR_angle', 'OO_distance', 'the', 'phi'], 'output_shape': 24, 'outputs': ['custom']}}
+Completed testing with 0.0316995111759752 val_loss
+
+Training network 47 of 49: adam_5000
+Training time: 7229.814867734909, training val_loss: 0.015485100448131561
+Test time: 0.2808668613433838, testing loss: 0.015467612072825432
+{'network_config': {'n_layers': 2, 'batch_size': 5000, 'optimizer': 'adam', 'epochs': 500}, 'layer_config': {'layer_type': ['dropout', 'dense'], 'n_nodes': [32, 32], 'activation': ['linear', 'linear'], 'dropout': [0.2, 0.2]}, 'io_config': {'input_shape': 7, 'inputs': ['the', 'omega', 'NCaR_angle', 'OO_distance', 'phi', 'end_Ca_end_angle', 'psi'], 'output_shape': 24, 'outputs': ['custom']}}
+Completed testing with 0.03170860474929213 val_loss
+
+Training network 48 of 49: adam_5000
+Training time: 7.498337030410767, training val_loss: 0.08232243359088898
+Test time: 0.2453310489654541, testing loss: 0.08217405527830124
+{'network_config': {'n_layers': 3, 'batch_size': 5000, 'optimizer': 'adam', 'epochs': 500}, 'layer_config': {'layer_type': ['dense', 'batch_norm', 'dropout'], 'n_nodes': [32, 32, 32], 'activation': ['exponential', 'selu', 'sigmoid'], 'dropout': [0.2, 0.1, 0.2]}, 'io_config': {'input_shape': 7, 'inputs': ['OO_distance', 'psi', 'phi', 'omega', 'NCaR_angle', 'end_Ca_end_angle', 'the'], 'output_shape': 24, 'outputs': ['custom']}}
+Completed testing with 0.1684568133205175 val_loss
+
+Training network 49 of 49: adam_5000
+Training time: 3.267014980316162, training val_loss: 0.25146716833114624
+Test time: 0.2737882137298584, testing loss: 0.25147801637649536
+{'network_config': {'n_layers': 5, 'batch_size': 5000, 'optimizer': 'adam', 'epochs': 500}, 'layer_config': {'layer_type': ['batch_norm', 'batch_norm', 'batch_norm', 'batch_norm', 'dropout'], 'n_nodes': [16, 4, 8, 8, 32], 'activation': ['tanh', 'exponential', 'elu', 'linear', 'tanh'], 'dropout': [0.2, 0.2, 0.1, 0.1, 0.1]}, 'io_config': {'input_shape': 7, 'inputs': ['OO_distance', 'NCaR_angle', 'the', 'phi', 'end_Ca_end_angle', 'psi', 'omega'], 'output_shape': 24, 'outputs': ['custom']}}
+Completed testing with 0.5155299335718154 val_loss
+
